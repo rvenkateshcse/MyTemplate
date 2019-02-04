@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Templates/v15/Server/sqlite3
+/SampleConsoleApp/obj/Debug
+/SampleWPFApp/obj/Debug
+/Templates/obj
+/TestSample/obj
+/WebAPITemplate/bin/Debug/netcoreapp2.1
+/WebAPITemplate/obj
