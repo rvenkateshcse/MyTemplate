@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace SampleWPFApp
 {
@@ -23,6 +11,27 @@ namespace SampleWPFApp
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Guidbutton_Click(object sender, RoutedEventArgs e)
+        {
+            tb_guid.Text = Guid.NewGuid().ToString();
+        }
+
+        private void Cpyguid_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(tb_guid.Text);
+        }
+
+        private void Cpyrandom_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(random.Text);
+        }
+
+        private void Genrandom_Click(object sender, RoutedEventArgs e)
+        {
+            Random ran = new Random();
+            random.Text = ran.Next(Convert.ToInt32(length.Text)).ToString();
         }
     }
 }
